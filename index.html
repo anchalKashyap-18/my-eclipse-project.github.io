@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF=8">
+<title> sun with sound </title>
+<style>
+body{
+background-image: url(https://cdn.mos.cms.futurecdn.net/kiGixyhrAiX5RR2f8rh8SZ.jpg);
+}
+.button{
+position: relative;
+text-align:center;
+width:150px;
+padding:35px;
+font-size:20px;
+color:#15f4ee;
+font-family:poppins;
+font-weight:200;
+border: 3px solid #15f4ee;
+text-transform:uppercase;
+letter-spacing: 6px;
+cursor:pointer;
+cursor-radius:100px;
+transition:1.5s;
+}
+.button:hover
+{
+box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee, 
+0 5px 50px #15f4ee inset, 0 5px 50px 0 #15f4ee;
+tex-shadow:0 0 5px #15f4ee,  0 0 5px #15f4ee;} 
+
+
+//solar//
+.button{
+position: relative;
+text-align:center;
+width:150px;
+padding:35px;
+font-size:20px;
+color:#15f4ee;
+font-family:poppins;
+font-weight:200;
+border: 3px solid #15f4ee;
+text-transform:uppercase;
+letter-spacing: 6px;
+cursor:pointer;
+cursor-radius:100px;
+transition:1.5s;
+}
+.button:hover
+{
+box-shadow: 0 5px 50px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee, 
+0 5px 50px #15f4ee inset, 0 5px 50px 0 #15f4ee;
+tex-shadow:0 0 5px #15f4ee,  0 0 5px #15f4ee;} 
+
+
+.sun{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+margin:auto;
+width:500px;
+height:500px;
+background-image:url(https://svs.gsfc.nasa.gov/vis/a030000/a030300/a030362/euvi_aia304_2012_carrington_print.jpg);
+
+border-radius:50%;
+background-size:cover;
+box-shadow:20px -20px 50px 2px #000 inset, 0 0 20px 2px #000;
+animation:spin 30s linear alternate infinite;
+}
+
+@keyframes spin {
+100%{background-position: 100%;}
+}
+</style>
+<body>
+<div class="sun"></div>
+<div  onclick="window.location.href = 'lunareclipse.html' "class="button">lunar eclipse</div></a>
+<div  onclick="window.location.href = 'solareclipse.html' "class="button">solar eclipse</div></a>
+ <audio controls loop autoplay> 
+        <source 
+        src="file:///C:/Users/hp/Desktop/universe/sun_sonification.wav">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</head>
+</body>
+</html>

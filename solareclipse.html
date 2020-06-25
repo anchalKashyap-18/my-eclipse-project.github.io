@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF=8">
+<title> solar eclipse</title>
+<style>
+html{
+box-sizing: border-box;
+}
+*, *::after, *::before {
+box-sizing:inherit;
+}
+html, body{
+height: 100%;
+}
+body {
+display: flex;
+justify-content: center;
+background-image: url(https://images.unsplash.com/photo-1543719621-92ebcae62483?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=762&q=80);
+align-items: center;
+overflow: hidden;
+}
+.moon{
+background: url(https://cdn11.bigcommerce.com/s-5luen2shhj/images/stencil/1280x1280/products/328/593/winter_world_physical_giclee_lg__72857.1560523190.jpg?c=2&imbypass=on) no-repeat;
+width: 230px;
+height:230px;
+border-radius: 50%;
+position: relative;
+border-radius:50%;
+background-size:cover;
+box-shadow:20px -10px 5px 5px #000 inset, 0 0 10px 2px #000;
+animation:spin 30s linear alternate infinite;
+}
+
+@keyframes spin {
+100%{background-position: 100%;}
+}
+
+.moon::before {
+content: '';
+background-color: #fa8d07;
+position: absolute;
+display: block;
+height: 100%;
+width:100%;
+border-radius: 50%;
+z-index: -1;
+animation: 3.2s cresent linear infinite alternate;
+}
+
+@keyframes cresent {
+0% {
+transform: translate(-30px,30px) scale(0.9);
+box-shadow: none;
+
+}
+50%{
+transform: translate(0px, 0px) sclae(1.02);
+box-shadow: 0 0 10px #f74a05, 0 0 80px 8px #ed8f65;
+background-color: #f7cf05;
+}
+100% {
+transform: translate(30px,-30px) scale(0.9);
+box-shadow: none;
+
+}
+</style>
+</head>
+<body>
+<div class="moon"></div>
+
+</body>
+</html>
